@@ -23,7 +23,7 @@ function setup() {
             fill(...item.color);
             ellipse(item.x, item.y, 10, 10);
         }
-    }, 100);
+    }, 300);
 
     socket.on("new-drawing", (data) => {
         fill(...data.color);
