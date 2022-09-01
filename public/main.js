@@ -1,4 +1,4 @@
-const socket = io.connect("https://draw-it-mern.herokuapp.com/");
+const socket = io.connect(location.origin);
 const color = [
     Math.floor(Math.random() * 256),
     Math.floor(Math.random() * 256),
