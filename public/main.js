@@ -17,11 +17,13 @@ function setup() {
     background(0);
     noStroke();
 
-    for (let i = 0; i < history.length; i++) {
-        const item = history[i];
-        fill(...item.color);
-        ellipse(item.x, item.y, 10, 10);
-    }
+    setTimeout(() => {
+        for (let i = 0; i < history.length; i++) {
+            const item = history[i];
+            fill(...item.color);
+            ellipse(item.x, item.y, 10, 10);
+        }
+    }, 100);
 
     socket.on("new-drawing", (data) => {
         fill(...data.color);
